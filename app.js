@@ -1,3 +1,5 @@
+var start = document.getElementById("start");
+var stop = document.getElementById("stop");
 var hours = 0;
 var mins = 0;
 var seconds = 0;
@@ -21,6 +23,8 @@ display();
 
 function handleStart() {
   console.log("Start");
+  start.disabled = true;
+  stop.disabled = false;
   interval = setInterval(() => {
     miliSeconds++;
     miliSecDisp.innerHTML = miliSeconds;
@@ -44,6 +48,8 @@ function handleStart() {
 
 function handleStop() {
   clearInterval(interval);
+  start.disabled = false;
+  stop.disabled = true;
 }
 
 function handleReset() {

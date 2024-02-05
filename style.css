@@ -31,3 +31,8 @@ button{
     background-color: black;
     color: white;
 }
+.btn-parent, .box-1 {
+    display: flex;
+    justify-content: center;
+}
+
