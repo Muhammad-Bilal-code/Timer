@@ -50,5 +50,11 @@ div#hoursDiv,div#minsDiv,div#secondsDiv {
 #reset,#stop{
     display: none
 }
-
+input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+}
 
