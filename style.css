@@ -8,10 +8,13 @@ align-items: center;
 height: 100vh;
 }
 h1{
-padding: 30px;
+padding:10px 30px;
 background-color: white;
 border-radius: 10px;
 font-size:6em;
+display: flex;
+/* flex-direction: column; */
+gap: 5px;
 }
 .btnParent{
  text-align: center;
@@ -35,4 +38,17 @@ button{
     display: flex;
     justify-content: center;
 }
+
+span#hours,span#mins,span#seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div#hoursDiv,div#minsDiv,div#secondsDiv {
+    display: flex;
+}
+#reset,#stop{
+    display: none
+}
+
 

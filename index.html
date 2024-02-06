@@ -12,14 +12,47 @@
       <div class="box">
         <div class="box-1">
           <h1>
-            <span id="hoursDisp">00</span>: <span id="minsDisp">00</span>:
-            <span id="secondsDisp">00</span>:
-            <span id="miliSecondsDisp">00</span>
+            <div id="hoursDiv">
+              <span id="hours">
+                <label id="hoursLabel">0</label>
+                <input
+                  type="text"
+                  placeholder="Enter Hours"
+                  onkeyup="handleHours(this)"
+                  id="hoursInpt"
+                />
+              </span>
+              <span>:</span>
+            </div>
+            <div id="minsDiv">
+              <span id="mins">
+                <label id="minsLabel">0</label>
+                <input
+                  type="text"
+                  placeholder="Enter Mins"
+                  onkeyup="handleMins(this)"
+                  id="minsInpt"
+                />
+              </span>
+              <span>:</span>
+            </div>
+            <div id="secondsDiv">
+              <span id="seconds">
+                <label for="" id="secondsLabel">0</label>
+                <input
+                  type="text"
+                  placeholder="Enter Seconds"
+                  onkeyup="handleSeconds(this)"
+                  id="secondsInpt"
+                />
+              </span>
+              <!-- <span>:</span> -->
+            </div>
           </h1>
         </div>
         <div class="btn-parent">
           <button onclick="handleStart()" id="start">Start</button>
-          <button onclick="handleStop()" disabled id="stop">Stop</button>
+          <button onclick="handleStop()" id="stop">Stop</button>
           <button onclick="handleReset()" id="reset">Reset</button>
         </div>
       </div>
