@@ -44,7 +44,17 @@ function handleStart() {
     // if (hours == 0) {
     // console.log("Bilal");
     seconds--;
-    secondsLabel.innerText = seconds;
+    console.log(seconds);
+    secondsLabel.innerHTML = seconds;
+    if (seconds < 0 && hours == 0 && mins == 0) {
+      seconds = 0;
+      secondsLabel.innerText = seconds;
+      mins = 0;
+      minsLabel.innerText = mins;
+      clearInterval(interval);
+
+      // }
+    }
     if (seconds < 0 && mins == 0 && hours > 0) {
       seconds = 60;
       secondsLabel.innerText = seconds;
@@ -58,14 +68,6 @@ function handleStart() {
       secondsLabel.innerText = seconds;
       mins--;
       minsLabel.innerText = mins;
-    }
-    if (seconds < 0) {
-      seconds = 0;
-      secondsLabel.innerText = seconds;
-      mins = 0;
-      minsLabel.innerText = mins;
-
-      // }
     }
   }, 1000);
 }
